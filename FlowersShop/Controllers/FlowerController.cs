@@ -24,7 +24,15 @@ namespace FlowersShop.Controllers
         }
 
         [HttpGet("id: long")]
-        public async Task<IActionResult> GetFlowerById(long id) => Ok(await flowerService.GetFlowerByIdAsync(id));
+        public async Task<IActionResult> GetFlowerById(long id)
+        {
+            var flower = await flowerService.GetFlowerByIdAsync(id);
+
+            if (flower is not null)
+                return Ok(flower);
+            else
+                return BadRequest($"{id} idda hech qanday ma'lumot topilmadi!!! ");
+        }
 
         [HttpPost, Route("GetFoworiteFlowers")]
         public async Task<IActionResult> GetFoworite(List<long> list)
