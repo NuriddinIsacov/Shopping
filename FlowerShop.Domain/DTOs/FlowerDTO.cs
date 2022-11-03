@@ -12,7 +12,6 @@ namespace FlowerShop.Domain.DTOs
         public int Count { get; set; }
         public FlowerType Type { get; set; }
         public string ImagePath { get; set; }
-        public DateTime CreatedDate { get; set; }
         public Status Status { get; set; }
     }
 }

@@ -31,7 +31,6 @@ namespace FlowerShop.Domain.Models
                 Description = flower.Description,
                 Type = flower.Type,
                 ImagePath = flower.ImagePath,
-                CreatedDate = flower.CreatedDate,
                 Status = flower.Status,
                 Count = flower.Count
             };
